@@ -1,3 +1,5 @@
+cmake_minimum_required(VERSION 3.8)
+
 set(BOARD esp32)
 
 include($ENV{ZEPHYR_BASE}/cmake/app/boilerplate.cmake NO_POLICY_SCOPE)
@@ -24,6 +26,7 @@ zephyr_link_libraries(
   rtc
   wpa2
   wps
+  mesh
 
   ## eps-idf wifi libs refer gcc libs symbols, so linked in libgcc
   gcc
